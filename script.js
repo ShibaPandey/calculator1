@@ -1,16 +1,18 @@
 // CALCULATOR
-const display = document.getElementById("dispaly");
+const display = document.getElementById("display");
 
-function appendToDispaly(input) {
+function appendToDisplay(input) {
   display.value += input;
 }
+
 function calculate() {
-  display.value = "";
-}
-function clearDisplay() {
   try {
     display.value = eval(display.value);
   } catch (error) {
     display.value = "Error";
   }
+}
+
+function clearDisplay() {
+  display.value = "";
 }
